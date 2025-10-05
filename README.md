@@ -70,6 +70,7 @@ A heatmap was plotted to visualize relationships between variables and the targe
 ## ⚙️ Model and Training
 
 ### **Model Used:** LightGBM (LGBMClassifier)
+
 ```python
 LGBMClassifier(
     objective='binary',
@@ -82,17 +83,18 @@ LGBMClassifier(
     random_state=42,
     n_jobs=-1
 )
-Validation Strategy
-	•	TimeSeriesSplit (n_splits=5) used to prevent data leakage.
-	•	Out-of-fold (OOF) predictions tracked for each split.
-	•	Metric used: F1 Score (focuses on imbalanced binary classes).
+```   <-- CLOSE CODE BLOCK HERE
 
-📊 Performance
+### **Validation Strategy**
+- TimeSeriesSplit (n_splits=5) used to prevent data leakage.
+- Out-of-fold (OOF) predictions tracked for each split.
+- Metric used: **F1 Score** (focuses on imbalanced binary classes).
 
-Metric
-Score
-OOF F1 Score
-0.8523
+### 📊 **Performance**
+| Metric | Score |
+|--------|-------|
+| OOF F1 Score | **0.8523** |
+
 ✅ Strong generalization on unseen time-based validation sets.
 🧩 Key Insights
 	•	Temporal patterns (especially nighttime hours) correlate with higher fault probability.
