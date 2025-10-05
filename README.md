@@ -83,7 +83,7 @@ LGBMClassifier(
     random_state=42,
     n_jobs=-1
 )
-```   <-- CLOSE CODE BLOCK HERE
+```  
 
 ### **Validation Strategy**
 - TimeSeriesSplit (n_splits=5) used to prevent data leakage.
